@@ -1,7 +1,7 @@
 import { featuresImage } from "@/utils";
 import React from "react";
 
-export const Features: React.FC = () => {
+const Features: React.FC = () => {
   return (
     <div className="px-4 py-10 lg:px-32 flex flex-col gap-14 bg-white">
       <div className="w-full flex lg:flex-row gap-4 lg:gap-0 flex-col ">
@@ -36,3 +36,5 @@ export const Features: React.FC = () => {
     </div>
   );
 };
+
+export default Features;

@@ -1,7 +1,7 @@
 import { AboutPage } from "@/utils";
 import React, { FC } from "react";
 
-export const About: FC = () => {
+const About: FC = () => {
   return (
     <div className="px-4 py-10 lg:px-32 flex flex-col gap-14 bg-white">
       <div className="w-full flex lg:flex-row gap-4 lg:gap-0 flex-col ">
@@ -29,7 +29,10 @@ export const About: FC = () => {
       </div>
       <div className="grid lg:grid-cols-3  gap-5 grid-cols-1 lg:gap-10 ">
         {AboutPage.map((abt, id) => (
-          <div key={id} className="flex gap-12 justify-center items-center flex-col">
+          <div
+            key={id}
+            className="flex gap-12 justify-center items-center flex-col"
+          >
             <div className="flex flex-col items-center justify-center">
               <p className="text-[#168314] text-[24px]">{abt.title}</p>
               <p className="text-[#656565] text-base">{abt.desp}</p>
@@ -41,3 +44,5 @@ export const About: FC = () => {
     </div>
   );
 };
+
+export default About;
