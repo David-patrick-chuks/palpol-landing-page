@@ -1,22 +1,38 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Poppins, Lobster } from "next/font/google";
+
+// Local fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
 
+// Google fonts
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"], // Specify the font weights you need
-  variable: "--font-inter", // Add Inter to your CSS variables
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700","800"], // Add weights you need for Poppins
+  variable: "--font-poppins",
+});
+
+const lobster = Lobster({
+  subsets: ["latin"],
+  weight: ["400"], // Lobster has only regular weight
+  variable: "--font-lobster",
 });
 
 export const metadata: Metadata = {
@@ -58,7 +74,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${inter.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${inter.variable} ${geistMono.variable} ${poppins.variable} ${lobster.variable} antialiased`}
       >
         {children}
       </body>

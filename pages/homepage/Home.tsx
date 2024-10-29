@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import { HeroLinks } from "@/utils";
+import Image from "next/image";
 import { CgArrowRight } from "react-icons/cg";
 
 export default function Hero(): React.ReactElement {
@@ -23,11 +24,27 @@ export default function Hero(): React.ReactElement {
              text-white items-center lg:flex-row justify-center"
             >
               <p className="py-3 capitalize lg:text-base rounded-3xl px-3 gap-1  text-xs bg-[#168314] flex items-center justify-center">
-                <img src="/images/apple.png" className="w-5 lg:w-6" alt="" />
+                <Image
+                  width={24}
+                  height={24}
+                  priority
+                  blurDataURL={"/images/apple.png"}
+                  placeholder="blur"
+                  src="/images/apple.png"
+                  alt="download"
+                />
                 Download now
               </p>{" "}
               <p className="py-3 capitalize lg:text-base rounded-3xl text-xs px-3 gap-2 bg-[#168314] flex items-center justify-center">
-                <img className="w-4 lg:w-4" src="/images/gplay.png" alt="" />
+                <Image
+                  width={24}
+                  height={24}
+                  priority
+                  blurDataURL={"/images/gplay.png"}
+                  placeholder="blur"
+                  src="/images/gplay.png"
+                  alt="download"
+                />
                 Download now
               </p>
             </div>

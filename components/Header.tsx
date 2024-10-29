@@ -1,6 +1,7 @@
 "use client";
 
 import { NavLinks } from "@/utils";
+import Image from "next/image";
 import React, { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { RiMenu4Fill } from "react-icons/ri";
@@ -26,9 +27,9 @@ const Header: React.FC = () => {
   return (
     <div className="flex py-2 relative lg:py-8 px-5 items-center  lg:px-16 justify-between bg-transparent  w-full z-50">
       <div className="flex items-center justify-start gap-10 lg:w-1/2">
-        <h1 className="text-2xl text-[#168314] gap-1 font-black  flex items-center justify-center italic ">
+        <h1 className="text-2xl font-poppins text-[#168314] gap-1 font-black  flex items-center justify-center italic ">
           {" "}
-          <img src="/images/palpol.png" className="w-5" alt="palpol Logo" />
+          <Image width={20} height={20}  priority  src="/images/palpol.png" className="w-5" alt="palpol Logo" />
           PolPal
         </h1>
         <p
