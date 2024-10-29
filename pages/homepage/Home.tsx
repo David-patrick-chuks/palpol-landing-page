@@ -1,6 +1,5 @@
 "use client";
 import Header from "@/components/Header";
-import { useLoadingContext } from "@/context/LoadingContext";
 import { HeroLinks } from "@/utils";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -9,7 +8,7 @@ import { CgArrowRight } from "react-icons/cg";
 export default function Hero(): React.ReactElement {
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
 
-  const { isLoading, setLoading } = useLoadingContext();
+  
   useEffect(() => {
     const image: HTMLImageElement = new window.Image();
     const screenWidth = window.innerWidth;
@@ -18,14 +17,14 @@ export default function Hero(): React.ReactElement {
       screenWidth >= 764 ? "/images/mainBg.png" : "/images/mobile.png";
 
     image.onload = () => {
-      setLoading(false);
+      
       setIsImageLoaded(true);
     };
   }, []);
 
   return (
     <>
-      {isLoading && (
+      {!isImageLoaded && (
         <div className="h-screen top-0 z-[6000] w-full fixed  bg-white flex justify-center items-center">
           <div className=" absolute w-full h-full animate-pulse bg-[#168314]/30"></div>
           <div id="circularG">
