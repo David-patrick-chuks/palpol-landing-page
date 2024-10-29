@@ -1,6 +1,7 @@
 "use client";
 
 import Footer from "@/components/Footer";
+import { LoadingProvider } from "@/context/LoadingContext";
 import About from "@/pages/homepage/About";
 import Benefits from "@/pages/homepage/Benefits";
 import FAQs from "@/pages/homepage/FAQs";
@@ -10,6 +11,8 @@ import Testimony from "@/pages/homepage/Testimony";
 
 export default function Home(): React.ReactElement {
   return (
+    <LoadingProvider>
+
     <div>
       <div>
         <Hero />
@@ -23,5 +26,6 @@ export default function Home(): React.ReactElement {
         </div>
       </div>
     </div>
+    </LoadingProvider>
   );
 }
