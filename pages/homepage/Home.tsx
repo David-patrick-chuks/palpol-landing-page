@@ -21,7 +21,7 @@ export default function Hero(): React.ReactElement {
       setLoading(false);
       setIsImageLoaded(true);
     };
-  }, []);
+  }, [isLoading]);
 
   return (
     <>
