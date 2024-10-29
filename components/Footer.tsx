@@ -13,7 +13,7 @@ const Footer: FC = () => {
   ];
 
   return (
-    <div className="bg-[#168314] h-[45dvh] lg:h-[60dvh] flex w-full overflow-hidden lg:rounded-[50px] px-4">
+    <div className="bg-[#168314] lg:py-0 py-3 h-[45dvh] lg:h-[60dvh] flex w-full overflow-hidden lg:rounded-[50px] px-4">
       <div className=" w-full lg:w-1/2 lg:pl-8 flex flex-col justify-between pb-1">
         <div className="flex flex-col gap-7 pt-3">
           <p className="text-4xl lg:text-[50px] leading-none text-white font-extrabold">DOWNLOAD NOW</p>
