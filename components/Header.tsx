@@ -30,7 +30,7 @@ const Header: React.FC = () => {
         <h1 className="text-2xl font-poppins text-[#168314] gap-1 font-black  flex items-center justify-center italic ">
           {" "}
           <Image width={20} height={20}  priority  src="/images/palpol.png" className="w-5" alt="palpol Logo" />
-          PolPal
+          PalPol
         </h1>
         <p
           className={`lg:flex ${

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { Inter, Lobster, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Inter, Poppins, Lobster } from "next/font/google";
 
 
 // Local fonts
@@ -37,15 +37,15 @@ const lobster = Lobster({
 });
 
 export const metadata: Metadata = {
-  title: "PolPal - Your Voting Companion",
+  title: "PalPol - Your Voting Companion",
   description:
-    "Easily locate your polling unit during elections and stay informed with news in politics, business, and sports. Download PolPal now!",
+    "Easily locate your polling unit during elections and stay informed with news in politics, business, and sports. Download PalPol now!",
   openGraph: {
-    title: "PolPal - Your Voting Companion",
+    title: "PalPol - Your Voting Companion",
     description:
-      "Find your polling unit during elections and stay updated with the latest news in politics, business, and sports. Download the PolPal app now!",
+      "Find your polling unit during elections and stay updated with the latest news in politics, business, and sports. Download the PalPol app now!",
     url: "https://yourdomain.com",
-    siteName: "PolPal",
+    siteName: "PalPol",
     locale: "en_US",
     type: "website",
     images: [
@@ -53,16 +53,16 @@ export const metadata: Metadata = {
         url: "/images/plat.png",
         width: 800,
         height: 300,
-        alt: "PolPal App Preview",
+        alt: "PalPol App Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@palpol",
-    title: "PolPal - Your Voting Companion",
+    title: "PalPol - Your Voting Companion",
     description:
-      "Locate your polling unit and stay updated with the latest news. Download PolPal today!",
+      "Locate your polling unit and stay updated with the latest news. Download PalPol today!",
     images: "/images/plat.png",
   },
 };
