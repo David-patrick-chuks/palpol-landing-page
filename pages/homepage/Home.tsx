@@ -1,11 +1,10 @@
-"use client"
+"use client";
 import Header from "@/components/Header";
 import { useLoadingContext } from "@/context/LoadingContext";
 import { HeroLinks } from "@/utils";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { CgArrowRight } from "react-icons/cg";
-import { PulseLoader } from "react-spinners";
 
 export default function Hero(): React.ReactElement {
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
@@ -18,22 +17,37 @@ export default function Hero(): React.ReactElement {
     image.src =
       screenWidth >= 764 ? "/images/mainBg.png" : "/images/mobile.png";
 
-    image.onload = () =>{
-      setLoading(false)
+    image.onload = () => {
+      setLoading(false);
       setIsImageLoaded(true);
-    } 
+    };
   }, []);
 
   return (
     <>
-       {isLoading && (
+      {isLoading && (
         <div className="h-screen top-0 z-[6000] w-full fixed  bg-white flex justify-center items-center">
           <div className=" absolute w-full h-full animate-pulse bg-[#168314]/30"></div>
-          <PulseLoader color="#168314" />
+          <div id="circularG">
+            <div id="circularG_1" className="circularG"></div>
+            <div id="circularG_2" className="circularG"></div>
+            <div id="circularG_3" className="circularG"></div>
+            <div id="circularG_4" className="circularG"></div>
+            <div id="circularG_5" className="circularG"></div>
+            <div id="circularG_6" className="circularG"></div>
+            <div id="circularG_7" className="circularG"></div>
+            <div id="circularG_8" className="circularG"></div>
+          </div>
         </div>
       )}
-  
-      <div className={`w-full ${isImageLoaded ? "bg-[url('/images/mobile.png')] lg:bg-[url('/images/mainBg.png')]" : "bg-white"} h-screen lg:h-fit overflow-hidden  bg-cover bg-no-repeat bg-top lg:pb-20 relative  bg-white flex flex-col`}>
+
+      <div
+        className={`w-full ${
+          isImageLoaded
+            ? "bg-[url('/images/mobile.png')] lg:bg-[url('/images/mainBg.png')]"
+            : "bg-white"
+        } h-screen lg:h-fit overflow-hidden  bg-cover bg-no-repeat bg-top lg:pb-20 relative  bg-white flex flex-col`}
+      >
         <Header />
         <div className="z-50 h-full gap-4 text-center grid w-full flex-col lg:h-screen grid-cols-1 grid-rows-4 lg:grid-rows-4 ">
           <div className="lg:row-span-2 row-span-1"></div>
