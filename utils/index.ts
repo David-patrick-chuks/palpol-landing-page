@@ -60,6 +60,31 @@ export const featuresImage: Array<string> = [
 export const userTestimonyImage: Array<string> = [
     "/images/testimony1.png", "/images/testimony1.png",
 ];
+export interface ITestimony {
+    name: string;
+    title: string;
+    comment: string;
+    rating: number;
+    appLogo: string;
+}
+
+export const TestimonyData: ITestimony[] = [
+    {
+        name: "Maxwell",
+        title: "Great Experience",
+        comment:"My experience is just wonderful.",
+        rating: 5,
+        appLogo: "/images/gplay.png",
+    },
+    {
+        name: "Samuel",
+        title: "Loving it",
+        comment:"Love the interesting pecks, smooth, fun worth every scroll.",
+        rating: 5,
+        appLogo: "/images/gplay.png",
+    },
+]
+
 
 export interface AboutPage {
     title: string;
@@ -71,15 +96,15 @@ export const AboutPage: AboutPage[] = [
     {
         title: "Download App",
         desp: "Palpol",
-        img: "/images/step1.png",
+        img: "/images/phone1.png",
     }, {
         title: "Check Your Choice",
         desp: "Easy Steps",
-        img: "/images/step2.png",
+        img: "/images/phone2.png",
     }, {
         title: "Setup Profile",
         desp: "User Profile",
-        img: "/images/step3.png",
+        img: "/images/phone3.png",
     },
 ]
 export const Faq = [

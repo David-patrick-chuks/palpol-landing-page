@@ -8,14 +8,14 @@ import { FaArrowDownLong } from "react-icons/fa6";
 
 export default function FAQs(): React.ReactElement {
   return (
-    <div className="h-full flex flex-col lg:pb-16 items-center justify-center gap-10 lg:gap-36 shadow-sm border-x border-b px-4 lg:rounded-b-[50px] rounded-b-[30px] w-full">
+    <div className="h-full flex flex-col lg:pb-16 items-center justify-center gap-10 lg:gap-28 shadow-sm border-x border-b px-4 lg:rounded-b-[50px] rounded-b-[30px] w-full">
       <div>
         <p className=" text-2xl lg:text-3xl">Frequently Asked Questions</p>
-        <p className="text-[#656565]  text-xs lg:text-sm">
+        <p className="text-[#656565] text-center mt-2 text-xs lg:text-sm">
           Answer to questions you will like to know
         </p>
       </div>
-      <div>
+      <div className="w-full flex flex-col">
         {Faq.map((fq, id) => (
           <Disclosure
             key={id}

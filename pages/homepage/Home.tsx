@@ -8,19 +8,27 @@ import { CgArrowRight } from "react-icons/cg";
 export default function Hero(): React.ReactElement {
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
 
-  
+
   useEffect(() => {
-    const image: HTMLImageElement = new window.Image();
-    const screenWidth = window.innerWidth;
-
-    image.src =
-      screenWidth >= 764 ? "/images/mainBg.png" : "/images/mobile.png";
-
-    image.onload = () => {
-      
+    const timer = setTimeout(() =>{
       setIsImageLoaded(true);
-    };
-  }, []);
+    },4000)
+
+    return () => clearTimeout(timer)
+  },[])
+
+  // useEffect(() => {
+  //   const image: HTMLImageElement = new window.Image();
+  //   const screenWidth = window.innerWidth;
+
+  //   image.src =
+  //     screenWidth >= 764 ? "/images/mainBg.png" : "/images/mobile.png";
+
+  //   image.onload = () => {
+
+  //     setIsImageLoaded(true);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -41,16 +49,12 @@ export default function Hero(): React.ReactElement {
       )}
 
       <div
-        className={`w-full ${
-          isImageLoaded
-            ? "bg-[url('/images/mobile.png')] lg:bg-[url('/images/mainBg.png')]"
-            : "bg-white"
-        } h-screen lg:h-fit overflow-hidden  bg-cover bg-no-repeat bg-top lg:pb-20 relative  bg-white flex flex-col`}
+        className={`w-full bg-[url('/images/mobile.png')] lg:bg-[url('/images/mainBg.png')] h-screen lg:h-fit overflow-hidden  bg-cover bg-no-repeat bg-top lg:pb-20 relative  bg-white flex flex-col`}
       >
         <Header />
         <div className="z-50 h-full gap-4 text-center grid w-full flex-col lg:h-screen grid-cols-1 grid-rows-4 lg:grid-rows-4 ">
           <div className="lg:row-span-2 row-span-1"></div>
-          <div className="text-center w-full lg:place-content-start place-content-end flex  lg:p-0  p-5 flex-col items-center gap-6 lg:gap-8">
+          <div className="text-center w-full lg:place-content-start place-content-end flex  lg:pt-5 xl:pt-10 p-5 flex-col items-center gap-6 lg:gap-8">
             <h1 className="font-extrabold text-4xl text-[#F7FFF7] lg:text-[55px]">
               Connect, Engage, Empower with PalPol
             </h1>

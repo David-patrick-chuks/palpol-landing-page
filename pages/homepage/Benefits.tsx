@@ -4,7 +4,7 @@ import { FC } from "react";
 
 const Benefits: FC = () => {
   return (
-    <div className="px-4   flex flex-col gap-24 bg-white">
+    <div className="px-4 mt-8 lg:mt-0 flex flex-col gap-24 bg-white">
       <div className="w-full flex lg:flex-row gap-4 lg:gap-0 flex-col ">
         <div className="lg:w-[60%] w-full flex flex-col">
           <p className="text-[#182218] leading-[70px] font-normal text-[35px]">
@@ -47,14 +47,14 @@ const Benefits: FC = () => {
       <div className="flex flex-col gap-5 lg:gap-16">
         {benefits.map((value) => (
           <div key={value.id} className={`flex w-full ${value.id % 2=== 0 ? "justify-start" :"justify-end"}`} >
-            <div className={`lg:w-[70%] w-full items-center flex ${value.id % 2=== 0 ? "flex-row-reverse" :"flex-row"}`}  >
-              <div className="p-[5px] hidden lg:flex mr-2 items-center justify-center bg-[#168314]/20 w-8 h-8 rounded-full">
+            <div className={`lg:w-[70%] w-full items-center flex ${value.id % 2=== 0 ? "flex-row-reverse" :"flex-row"}`} >
+              <div className={`p-[5px] hidden lg:flex ${value.id % 2=== 0 ?"ml-2" : "mr-2"} items-center justify-center bg-[#168314]/20 w-8 h-8 rounded-full`}>
                 <span className="bg-[#168314]   w-full h-full rounded-full">
                   {" "}
                 </span>
               </div>
               <div className="w-[30%] hidden lg:block bg-[#168314]/30 h-[1.2px]"></div>
-              <div className="lg:w-[60%] w-full lg:ml-6 bg-[#168314]/10 p-5 rounded-[20px]">
+              <div className={`lg:w-[60%] w-full ${value.id % 2=== 0 ?"lg:mr-6" : "lg:ml-6"}  bg-[#168314]/10 p-5 rounded-[20px]`}>
                 <div className="p-6 rounded-[10px] bg-[#168314]/10">
                   <p className="text-[#168314] text-xl">{value.title}</p>
                   <p className="text-[#333333] text-base ">{value.details}</p>

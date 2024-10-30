@@ -44,13 +44,13 @@ const About: FC = () => {
           </div>
         </div>
       </div>
-      <div className="grid px-5 lg:px-0 lg:grid-cols-3 gap-5 grid-cols-1 lg:gap-8 ">
+      <div className="grid px-5 lg:px-0 lg:grid-cols-3 gap-5 grid-cols-1 lg:gap-24 ">
         {AboutPage.map((abt, id) => (
-          <div key={id}>
-            {/* <div className="flex flex-col items-center justify-center">
+          <div key={id} className="flex flex-col gap-10">
+            <div className="flex flex-col items-center justify-center">
               <p className="text-[#168314] text-[24px]">{abt.title}</p>
               <p className="text-[#656565] text-base">{abt.desp}</p>
-            </div> */}
+            </div>
             <Image
               width={24}
               height={24}
