@@ -35,7 +35,7 @@ export default function Testimony(): ReactElement {
                 ))
               }</p>
             </div>
-            <p className="text-sm w-[90%] text-[#333333]">"{data.comment}"</p>
+            <p className="text-sm w-[90%] text-[#333333]">&quot;{data.comment}&quot;</p>
             <p className="py-2 capitalize  rounded-3xl text-xs gap-2  flex items-center ">
               <Image
                 width={12}
