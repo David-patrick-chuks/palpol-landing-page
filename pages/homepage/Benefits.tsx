@@ -23,7 +23,7 @@ const Benefits: FC = () => {
                 height={24}
                 priority
                 blurDataURL={"/images/apple.png"}
-                placeholder="blur"
+                
                 src="/images/apple.png"
                 alt="download"
               />
@@ -35,7 +35,7 @@ const Benefits: FC = () => {
                 height={24}
                 priority
                 blurDataURL={"/images/gplay.png"}
-                placeholder="blur"
+                
                 alt="download"
                 src="/images/gplay.png"
               />

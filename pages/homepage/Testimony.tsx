@@ -1,6 +1,7 @@
-import { ITestimony, TestimonyData, userTestimonyImage } from "@/utils";
+import { ITestimony, TestimonyData } from "@/utils";
 import Image from "next/image";
 import { ReactElement } from "react";
+import { FaStar } from "react-icons/fa";
 
 export default function Testimony(): ReactElement {
   return (
@@ -22,7 +23,7 @@ export default function Testimony(): ReactElement {
       <div className="flex mt-3 h-[350px] lg:mt-0 w-full flex-col lg:flex-row gap-8">
         <div className="lg:block hidden w-[30%]"></div>
         {TestimonyData.map((data: ITestimony, id : number) => {
-          let totalRating = 5 
+          const totalRating : number = 5 
           return (
           <div key={id} className={`w-full pb-4 pt-7 px-3 shadow rounded-[20px] flex justify-between h-full items-start flex-col lg:w-[35%]`}>
             <div className="flex flex-col gap-1">
@@ -30,7 +31,7 @@ export default function Testimony(): ReactElement {
               <p className="text-xs text-[#959595]">{data.title}</p>
               <p className="flex gap-[1px]">{
                 [...Array(totalRating)].map((_, i) =>(
-                  <span key={i} className={` ${ i < data.rating ? "text-yellow-600" : "text-gray-500"}`}>&#9733;</span>
+                  <span key={i} className={` ${ i < data.rating ? "text-yellow-600" : "text-gray-500"}`}><FaStar /></span>
                 ))
               }</p>
             </div>
@@ -41,7 +42,7 @@ export default function Testimony(): ReactElement {
                 height={12}
                 priority
                 blurDataURL={data.appLogo}
-                placeholder="blur"
+                
                 alt="download"
                 src={data.appLogo}
               />

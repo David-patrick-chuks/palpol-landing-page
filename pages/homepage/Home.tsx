@@ -72,7 +72,7 @@ export default function Hero(): React.ReactElement {
                   height={24}
                   priority
                   blurDataURL={"/images/apple.png"}
-                  placeholder="blur"
+                  
                   src="/images/apple.png"
                   alt="download"
                 />
@@ -84,7 +84,7 @@ export default function Hero(): React.ReactElement {
                   height={24}
                   priority
                   blurDataURL={"/images/gplay.png"}
-                  placeholder="blur"
+                  
                   src="/images/gplay.png"
                   alt="download"
                 />

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
-import { FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer: FC = () => {
@@ -24,7 +24,7 @@ const Footer: FC = () => {
                 height={24}
                 priority
                 blurDataURL={"/images/apple.png"}
-                placeholder="blur"
+                
                 src="/images/apple.png"
                 alt="download"
               />
@@ -36,7 +36,7 @@ const Footer: FC = () => {
                 height={24}
                 priority
                 blurDataURL={"/images/gplay.png"}
-                placeholder="blur"
+                
                 alt="download"
                 src="/images/gplay.png"
               />

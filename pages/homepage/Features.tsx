@@ -24,7 +24,7 @@ const Features: React.FC = () => {
                 height={24}
                 priority
                 blurDataURL={"/images/apple.png"}
-                placeholder="blur"
+                
                 alt="download"
                 src="/images/apple.png"
               />
@@ -36,7 +36,7 @@ const Features: React.FC = () => {
                 height={24}
                 priority
                 blurDataURL={"/images/gplay.png"}
-                placeholder="blur"
+                
                 alt="download"
                 src="/images/gplay.png"
               />
@@ -52,7 +52,7 @@ const Features: React.FC = () => {
             height={24}
             layout="responsive"
             blurDataURL={image}
-            placeholder="blur"
+            
             key={id}
             priority
             src={image}
@@ -78,7 +78,7 @@ const Features: React.FC = () => {
                 height={24}
                 priority
                 blurDataURL={"/images/apple.png"}
-                placeholder="blur"
+                
                 alt="download"
                 src="/images/apple.png"
               />
@@ -90,7 +90,7 @@ const Features: React.FC = () => {
                 height={24}
                 priority
                 blurDataURL={"/images/gplay.png"}
-                placeholder="blur"
+                
                 alt="download"
                 src="/images/gplay.png"
               />
@@ -105,7 +105,7 @@ const Features: React.FC = () => {
             priority
             layout="responsive"
             blurDataURL={"/images/map.png"}
-            placeholder="blur"
+            
             alt="download"
             src="/images/map.png"
           />
