@@ -8,7 +8,6 @@ import { CgArrowRight } from "react-icons/cg";
 export default function Hero(): React.ReactElement {
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
 
-
   useEffect(() => {
     const timer = setTimeout(() =>{
       setIsImageLoaded(true);
